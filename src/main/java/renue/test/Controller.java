@@ -1,16 +1,21 @@
 package renue.test;
 
+import java.util.List;
+
 public class Controller {
 
-    private View view;
-    private Parser parser = new Parser();
 
-    public Controller(View view){
-        this.view = view;
-    }
+    private final Service service = new Service();
 
     public void parseFilter(String filterExpression){
-        parser.parseExpression(filterExpression);
+        service.parseExpression(filterExpression);
     }
 
+    public List<String> getRows(String name){
+        return service.getRows(name);
+    }
+
+    public void identifyAirports(){
+        service.identifyAirports();
+    }
 }

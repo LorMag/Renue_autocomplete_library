@@ -1,3 +1,5 @@
+package renue.test;
+
 public class Airport implements Comparable<Airport>{
     private String name;
     private long pointer;

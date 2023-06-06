@@ -1,16 +1,16 @@
-package org.example.Filters;
+package renue.test.filters;
 
 public class FilterGreaterThanStrategy implements FilterStrategy {
 
-    private int indexOfColumn;
-    private String rightOperand;
+    private final int indexOfColumn;
+    private final String rightOperand;
 
-    private FilterGreaterThanStrategy(int indexOfColumn, String rightOperand){
+    private FilterGreaterThanStrategy(int indexOfColumn, String rightOperand) {
         this.indexOfColumn = indexOfColumn;
         this.rightOperand = rightOperand;
     }
 
-    public static FilterStrategy createInstance(String filter){
+    public static FilterStrategy createInstance(String filter) {
         String[] operands = filter.split(">");
         return new FilterGreaterThanStrategy(Integer.parseInt(operands[0]) - 1, operands[1]);
     }

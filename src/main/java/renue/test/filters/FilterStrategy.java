@@ -1,4 +1,4 @@
-package org.example.Filters;
+package renue.test.filters;
 
 public interface FilterStrategy {
 

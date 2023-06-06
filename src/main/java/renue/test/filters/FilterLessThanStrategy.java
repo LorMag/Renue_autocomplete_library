@@ -1,8 +1,8 @@
-package org.example.Filters;
+package renue.test.filters;
 
 public class FilterLessThanStrategy implements FilterStrategy{
-    private int indexOfColumn;
-    private String rightOperand;
+    private final int indexOfColumn;
+    private final String rightOperand;
 
     private FilterLessThanStrategy(int indexOfColumn, String rightOperand){
         this.indexOfColumn = indexOfColumn;
